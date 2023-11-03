@@ -5,8 +5,6 @@
 ##|__/|__/_/  |_|___/_____/  /_____/_____/_/ |_/\____/ /_/ /_/ /_/    
 ##                                                                V1.1
 
-# https://discord.com/api/oauth2/authorize?client_id=1113643537918087228&permissions=2147493888&scope=bot
-
 # v1.1 is the official release
 # Added message for every ten incorrect tries
 # Silented all non-important messages to reduce spam
