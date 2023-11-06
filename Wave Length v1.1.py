@@ -11,7 +11,6 @@
 
 
 import random
-import json
 import asyncio
 import time
 import discord
@@ -106,7 +105,7 @@ async def clear(interaction: discord.Interaction):
     currentGame.rememberMessage = None
     currentGame.readyPlayers = 0
     del listOfGames[interaction.channel.id]
-    await interaction.channel.send(embed = discord.Embed(description = f"{interaction.user.global_name} has restarted the linking process.", silent=True))
+    await interaction.channel.send(embed = discord.Embed(description = f"{interaction.user.global_name} has restarted the linking process."), silent=True)
 
 
 @bot.tree.command(name="wlplayercount", description = "Change number of currentPlayers.")
