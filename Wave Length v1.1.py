@@ -144,7 +144,7 @@ async def compare_thoughts(interaction):
         if len(currentGame.thoughtsBanned) % 30 == 0:
             await interaction.channel.send(embed = discord.Embed(description = random.choice(("Mental mismatch detected. Administering electrical recalibration... Success. Resuming connection attempt.",\
                                                                                              "Neural incompatibility detected. Spinal fluid transfusion initialized... Success. Resuming connection attempt.",\
-                                                                                             "Cerebral discordance detected. Initialzing genomic revision... Success. Resuming connection attempt."))), silent=True)
+                                                                                             "Cerebral discordance detected. Initializing genomic revision... Success. Resuming connection attempt."))), silent=True)
 @tasks.loop(hours=168)
 async def wipe():
     listOfGames.clear()
