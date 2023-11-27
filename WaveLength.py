@@ -116,7 +116,7 @@ async def player_count(interaction: discord.Interaction, number: int):
     if 2 <= number <= 100:
         currentGame.numberOfPlayers = number
         await interaction.response.send_message("Player count adjusted.", ephemeral=True)
-        await interaction.channel.send(embed = discord.Embed(description = f"Now linking {number} brains."), silent = True)
+        await interaction.channel.send(embed = discord.Embed(description = f"Now linking {number} brains per {interaction.user.global_name}'s request."), silent = True)
         if len(currentGame.currentPlayers) == currentGame.numberOfPlayers:
             await compare_thoughts(interaction)
     elif number < 2:
