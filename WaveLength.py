@@ -5,9 +5,8 @@
 ##|__/|__/_/  |_|___/_____/  /_____/_____/_/ |_/\____/ /_/ /_/ /_/    
 ##                                                                V1.1
 
-# v1.1 is the official release
-# Added message for every ten incorrect tries
-# Silented all non-important messages to reduce spam
+# v1.1.1 is the official release
+# Added username to members added message to prevent anonymous ne'er-do-wells
 
 
 import random
