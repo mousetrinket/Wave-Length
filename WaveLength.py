@@ -3,10 +3,10 @@
 ##| | /| / / /| | | / / __/    / /   / __/ /  |/ / / __  / / / /_/ /  
 ##| |/ |/ / ___ | |/ / /___   / /___/ /___/ /|  / /_/ / / / / __  /   
 ##|__/|__/_/  |_|___/_____/  /_____/_____/_/ |_/\____/ /_/ /_/ /_/    
-##                                                                V1.1
+##                                                                V1.1.2
 
-# v1.1.1 is the official release
-# Added username to members added message to prevent anonymous ne'er-do-wells
+# v1.1.2 is the official release
+# Genomic rewriting is now static instead of being dependent on the number of players
 
 
 import random
@@ -140,7 +140,7 @@ async def compare_thoughts(interaction):
         currentGame.thoughtsCheck.clear()
         currentGame.readyPlayers = 0
         currentGame.rememberMessage = None  
-        if len(currentGame.thoughtsBanned) % 30 == 0:
+        if (len(currentGame.thoughtsBanned)/currentGame.numberOfPlayers) % 15 == 0:
             await interaction.channel.send(embed = discord.Embed(description = random.choice(("Mental mismatch detected. Administering electrical recalibration... Success. Resuming connection attempt.",\
                                                                                              "Neural incompatibility detected. Spinal fluid transfusion initialized... Success. Resuming connection attempt.",\
                                                                                              "Cerebral discordance detected. Initializing genomic revision... Success. Resuming connection attempt."))), silent=True)
